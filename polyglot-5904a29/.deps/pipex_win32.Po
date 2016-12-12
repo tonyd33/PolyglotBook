@@ -1,0 +1,1 @@
+pipex_win32.o: pipex_win32.c
