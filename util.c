@@ -24,7 +24,6 @@
 
 #include "main.h"
 #include "util.h"
-#include "gui.h"
 
 // macros
 

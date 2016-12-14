@@ -10,7 +10,6 @@
 
 #include "board.h"
 #include "engine.h"
-#include "gui.h"
 #include "move.h"
 #include "move_do.h"
 #include "move_legal.h"
