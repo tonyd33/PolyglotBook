@@ -58,15 +58,15 @@ am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man6dir)" \
 PROGRAMS = $(bin_PROGRAMS)
 am_polyglot_OBJECTS = attack.$(OBJEXT) \
 	board.$(OBJEXT) book.$(OBJEXT) book_make.$(OBJEXT) \
-	book_merge.$(OBJEXT) colour.$(OBJEXT) engine.$(OBJEXT) \
+	book_merge.$(OBJEXT) colour.$(OBJEXT) \
 	fen.$(OBJEXT) game.$(OBJEXT) \
 	hash.$(OBJEXT) ini.$(OBJEXT) io.$(OBJEXT) line.$(OBJEXT) \
 	list.$(OBJEXT) main.$(OBJEXT) move.$(OBJEXT) move_do.$(OBJEXT) \
 	move_gen.$(OBJEXT) move_legal.$(OBJEXT) option.$(OBJEXT) \
 	parse.$(OBJEXT) pgheader.$(OBJEXT) pgn.$(OBJEXT) \
-	piece.$(OBJEXT) pipex_posix.$(OBJEXT) pipex_win32.$(OBJEXT) \
+	piece.$(OBJEXT) \
 	random.$(OBJEXT) san.$(OBJEXT) \
-	square.$(OBJEXT) uci.$(OBJEXT) \
+	square.$(OBJEXT) \
 	util.$(OBJEXT)
 polyglot_OBJECTS = $(am_polyglot_OBJECTS)
 polyglot_LDADD = $(LDADD)
@@ -203,7 +203,7 @@ target_alias =
 top_build_prefix = 
 top_builddir = .
 top_srcdir = .
-polyglot_SOURCES = attack.c board.c book.c book_make.c book_merge.c colour.c  engine.c fen.c game.c hash.c ini.c io.c line.c list.c main.c move.c move_do.c move_gen.c move_legal.c option.c parse.c pgheader.c pgn.c piece.c pipex_posix.c pipex_win32.c random.c san.c square.c uci.c util.c colour.h hash.h ini.h move_gen.h piece.h attack.h config.h io.h move.h pipex.h uci.h board.h engine.h line.h move_legal.h random.h util.h book.h list.h option.h san.h book_make.h fen.h main.h parse.h book_merge.h game.h move_do.h pgheader.h pgn.h square.h 
+polyglot_SOURCES = attack.c board.c book.c book_make.c book_merge.c colour.c fen.c game.c hash.c ini.c io.c line.c list.c main.c move.c move_do.c move_gen.c move_legal.c option.c parse.c pgheader.c pgn.c piece.c random.c san.c square.c util.c colour.h hash.h ini.h move_gen.h piece.h attack.h config.h io.h move.h pipex.h board.h line.h move_legal.h random.h util.h book.h list.h option.h san.h book_make.h fen.h main.h parse.h book_merge.h game.h move_do.h pgheader.h pgn.h square.h 
 dist_doc_DATA = README README1.3 README1.4 README1.4w README1.4w10UCI book_format.html
 man6_MANS = polyglot.man
 EXTRA_DIST = makefile.gcc makefile.ms polyglot.man polyglot.pod polyglot.spec debian/changelog debian/control debian/docs debian/README debian/compat debian/copyright debian/files debian/polyglot.substvars debian/rules
@@ -316,7 +316,6 @@ include ./$(DEPDIR)/book.Po
 include ./$(DEPDIR)/book_make.Po
 include ./$(DEPDIR)/book_merge.Po
 include ./$(DEPDIR)/colour.Po
-include ./$(DEPDIR)/engine.Po
 include ./$(DEPDIR)/fen.Po
 include ./$(DEPDIR)/game.Po
 include ./$(DEPDIR)/hash.Po
@@ -334,12 +333,9 @@ include ./$(DEPDIR)/parse.Po
 include ./$(DEPDIR)/pgheader.Po
 include ./$(DEPDIR)/pgn.Po
 include ./$(DEPDIR)/piece.Po
-include ./$(DEPDIR)/pipex_posix.Po
-include ./$(DEPDIR)/pipex_win32.Po
 include ./$(DEPDIR)/random.Po
 include ./$(DEPDIR)/san.Po
 include ./$(DEPDIR)/square.Po
-include ./$(DEPDIR)/uci.Po
 include ./$(DEPDIR)/util.Po
 
 .c.o:
