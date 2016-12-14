@@ -210,7 +210,6 @@ void my_fatal(const char format[], ...) {
             // abort();
     } else {
       Error = TRUE;
-      quit();
     }
 }
 
