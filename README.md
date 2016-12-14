@@ -1,3 +1,3 @@
 ## Summary
 
-Create open-source Polyglot book in command line.
+Create open-source Polyglot book from PGN file in command line.
