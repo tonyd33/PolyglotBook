@@ -29,8 +29,6 @@
 #include "square.h"
 #include "uci.h"
 #include "util.h"
-#include "xboard2uci.h"
-#include "uci2uci.h"
 #include "ini.h"
 #include "util.h"
 
@@ -561,8 +559,6 @@ int main(int argc, char * argv[]) {
         }
     }
 
-    //    gui_init(GUI);
-    mainloop();
     return EXIT_SUCCESS; 
 }
 

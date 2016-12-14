@@ -59,7 +59,7 @@ PROGRAMS = $(bin_PROGRAMS)
 am_polyglot_OBJECTS = mainloop.$(OBJEXT) attack.$(OBJEXT) \
 	board.$(OBJEXT) book.$(OBJEXT) book_make.$(OBJEXT) \
 	book_merge.$(OBJEXT) colour.$(OBJEXT) engine.$(OBJEXT) \
-	epd.$(OBJEXT) fen.$(OBJEXT) game.$(OBJEXT) \
+	epd.$(OBJEXT) fen.$(OBJEXT) gui.$(OBJEXT) game.$(OBJEXT) \
 	hash.$(OBJEXT) ini.$(OBJEXT) io.$(OBJEXT) line.$(OBJEXT) \
 	list.$(OBJEXT) main.$(OBJEXT) move.$(OBJEXT) move_do.$(OBJEXT) \
 	move_gen.$(OBJEXT) move_legal.$(OBJEXT) option.$(OBJEXT) \
@@ -67,7 +67,7 @@ am_polyglot_OBJECTS = mainloop.$(OBJEXT) attack.$(OBJEXT) \
 	piece.$(OBJEXT) pipex_posix.$(OBJEXT) pipex_win32.$(OBJEXT) \
 	random.$(OBJEXT) san.$(OBJEXT) \
 	square.$(OBJEXT) uci.$(OBJEXT) uci2uci.$(OBJEXT) \
-	util.$(OBJEXT) xboard2uci.$(OBJEXT)
+	util.$(OBJEXT)
 polyglot_OBJECTS = $(am_polyglot_OBJECTS)
 polyglot_LDADD = $(LDADD)
 DEFAULT_INCLUDES = -I.
@@ -203,7 +203,7 @@ target_alias =
 top_build_prefix = 
 top_builddir = .
 top_srcdir = .
-polyglot_SOURCES = mainloop.c attack.c board.c book.c book_make.c book_merge.c colour.c  engine.c epd.c fen.c game.c hash.c ini.c io.c line.c list.c main.c move.c move_do.c move_gen.c move_legal.c option.c parse.c pgheader.c pgn.c piece.c pipex_posix.c pipex_win32.c random.c san.c square.c uci.c uci2uci.c util.c xboard2uci.c mainloop.h colour.h hash.h ini.h move_gen.h piece.h uci2uci.h attack.h config.h io.h move.h pipex.h uci.h board.h engine.h line.h move_legal.h random.h util.h book.h epd.h list.h option.h san.h book_make.h fen.h main.h parse.h book_merge.h game.h move_do.h pgheader.h pgn.h square.h xboard2uci.h
+polyglot_SOURCES = mainloop.c attack.c board.c book.c book_make.c book_merge.c colour.c  engine.c epd.c fen.c gui.c game.c hash.c ini.c io.c line.c list.c main.c move.c move_do.c move_gen.c move_legal.c option.c parse.c pgheader.c pgn.c piece.c pipex_posix.c pipex_win32.c random.c san.c square.c uci.c uci2uci.c util.c mainloop.h colour.h hash.h ini.h move_gen.h piece.h uci2uci.h attack.h config.h gui.h io.h move.h pipex.h uci.h board.h engine.h line.h move_legal.h random.h util.h book.h epd.h list.h option.h san.h book_make.h fen.h main.h parse.h book_merge.h game.h move_do.h pgheader.h pgn.h square.h 
 dist_doc_DATA = README README1.3 README1.4 README1.4w README1.4w10UCI book_format.html
 man6_MANS = polyglot.man
 EXTRA_DIST = makefile.gcc makefile.ms polyglot.man polyglot.pod polyglot.spec debian/changelog debian/control debian/docs debian/README debian/compat debian/copyright debian/files debian/polyglot.substvars debian/rules
@@ -320,6 +320,7 @@ include ./$(DEPDIR)/engine.Po
 include ./$(DEPDIR)/epd.Po
 include ./$(DEPDIR)/fen.Po
 include ./$(DEPDIR)/game.Po
+include ./$(DEPDIR)/gui.Po
 include ./$(DEPDIR)/hash.Po
 include ./$(DEPDIR)/ini.Po
 include ./$(DEPDIR)/io.Po
@@ -344,7 +345,6 @@ include ./$(DEPDIR)/square.Po
 include ./$(DEPDIR)/uci.Po
 include ./$(DEPDIR)/uci2uci.Po
 include ./$(DEPDIR)/util.Po
-include ./$(DEPDIR)/xboard2uci.Po
 
 .c.o:
 	$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
