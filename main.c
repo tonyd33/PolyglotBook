@@ -174,7 +174,9 @@ int main(int argc, char * argv[])
     ini_init(ini_command);
 
         // book utilities: do not touch these
-    
+   
+    printf("MAKING BOOK\n");
+ 
     if (argc >= 2 && my_string_equal(argv[1],"make-book")) {
         book_make(argc,argv);
         return EXIT_SUCCESS;
