@@ -8,6 +8,10 @@ Polyglot is an open-source chess opening book format introduced by Fabien Letouz
 
 ## Usage
 
+Download a sample PGN file:
+
 `wget http://smallchess.com/Games/Magnus%20Carlsen.pgn`
+
+Create a Polyglot book with the PGN file:
 
 `polyglot MakeBook -pgn Magnus\ Carlsen.pgn -bin Carlsen.bin`
