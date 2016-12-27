@@ -4,6 +4,6 @@ Polyglot is an open-source chess opening book format introduced by Fabien Letouz
 
 ## Compile
 
-`gcc *.c`
+`gcc *.c -opolyglot`
 
 ## Usage
