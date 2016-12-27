@@ -381,19 +381,3 @@ void option_clear(option_list_t *option){
    }
    option->option_nb=0;
 }
-
-// option_from_ini()
-
-void option_from_ini(option_list_t *option,
-                     ini_t *ini,
-                     const char *section){
-    ini_entry_t *entry;
-    ini_start_iter(ini);
-    while((entry=ini_next(ini))){
-        option_set(option,entry->name,entry->value);
-        option_set_default(option,entry->name,entry->value);
-    }
-}
-
-// end of option.cpp
-

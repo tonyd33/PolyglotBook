@@ -1,7 +1,3 @@
-// book_make.c
-
-// includes
-
 #include <errno.h>
 #include <math.h>
 #include <stdio.h>
@@ -115,12 +111,8 @@ static uint64 read_integer(FILE * file, int size);
 static void read_entry_file(FILE *f, entry_t *entry);
 static void write_entry_file(FILE * f, const entry_t * entry);
 
-// functions
-
-// book_make()
-
-void book_make(int argc, char * argv[]) {
-
+void book_make(int argc, char * argv[])
+{
    int i;
    const char * pgn_file;
    const char * bin_file;
@@ -142,7 +134,7 @@ void book_make(int argc, char * argv[]) {
 
       if (FALSE) {
 
-      } else if (my_string_equal(argv[i],"make-book")) {
+      } else if (my_string_equal(argv[i], "MakeBook")) {
 
          // skip
 
@@ -253,10 +245,7 @@ static void book_insert(const char file_name[]) {
 
    ASSERT(file_name!=NULL);
 
-   // init
-
    pgn->game_nb=1;
-   // scan loop
 
    pgn_open(pgn,file_name);
 
@@ -1093,8 +1082,3 @@ void book_info(int argc,char* argv[]){
                total_pos-white_pos-black_pos);
     }
 }
-
-
-
-// end of book_make.cpp
-
