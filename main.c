@@ -15,6 +15,7 @@
 #include "option.h"
 #include "piece.h"
 #include "square.h"
+#include "attack.h"
 
 int main(int argc, char * argv[])
 {
